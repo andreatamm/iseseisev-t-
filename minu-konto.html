@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minu konto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Logo" style="height: 70px">
+            </div>
+            <nav class="top-menu">
+                <ul>
+                    <li><a href="#"><img src="assets/search.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                    <li><a href="#"><img src="assets/account.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                    <li><a href="#"><img src="assets/shopping.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                </ul>
+                </nav>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Avaleht</a></li>
+                <li><a href="#">Pood</a></li>
+                <li><a href="#">Muusika</a></li>
+                <li><a href="ettevottest.html">Bänd</a></li>
+                <li><a href="#">Tuurid</a></li>
+            </ul>
+    </nav>
+    </header>
+
+
+<div class="main-container">
+    <!-- Login Section -->
+    <section class="content-section login-page">
+        <div class="login-container">
+            <h2>Sisselogimine</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Kasutajanimi</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Salasõna</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Logi sisse</button>
+            </form>
+            <p>Unustasid salasõna? <a href="#">Taasta siin</a></p>
+        </div>
+    </section>
+</div>
+
+   <!-- Footer Section -->
+   <footer>
+    <div class="footer-container">
+        <div class="footer-section large">
+            <h3>Meist</h3>
+            <p>Infernal Reign toob kuulajateni tumedad ja toored helid, 
+                mis loovad sügava emotsionaalse kogemuse. Meie muusika 
+                on kaose ja energia rituaal. </p>
+        </div>
+        <div class="footer-section small">
+            <h3>Info</h3>
+            <ul>
+                <li><a href="#">Edasimüüjale</a></li>
+                <li><a href="#">Tellimisinfo</a></li>
+                <li><a href="#">Transport</a></li>
+                <li><a href="#">KKK</a></li>
+            </ul>
+        </div>
+        <div class="footer-section small">
+            <h3>Võta ühendust</h3>
+            <ul>
+                <li>E-post: info@infernalreign.com</li>
+                <li>Telefon: (123) 456-7890</li>
+                <li>Aadress: 1234 Street, City, Country</li>
+            </ul>
+        </div>           
+    </div>
+    <div class="footer-bottom">
+        <p>2024 &copy; Infernal Reign. Kõik õigused kaitstud.</p>
+    </div>
+</footer>
+    <!-- JavaScript Code -->
+    <script>
+        // Toggle the main menu
+        function toggleMenu() {
+            const menu = document.querySelector('.main-menu');
+            menu.classList.toggle('menu-active');
+        }
+
+        // Toggle the dropdown submenus
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.closest('li').querySelector('.dropdown');
+            const toggleIcon = event.target;
+            
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                toggleIcon.textContent = '+';
+            } else {
+                dropdown.style.display = 'block';
+                toggleIcon.textContent = '–';
+            }
+        }
+    </script>
+
+</body>
+</html>

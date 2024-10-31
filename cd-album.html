@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD Album</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Logo" style="height: 70px">
+            </div>
+            <nav class="top-menu">
+                <ul>
+                    <li><a href="#"><img src="assets/search.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                    <li><a href="#"><img src="assets/account.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                    <li><a href="#"><img src="assets/shopping.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                </ul>
+                </nav>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Avaleht</a></li>
+                <li><a href="#">Pood</a></li>
+                <li><a href="#">Muusika</a></li>
+                <li><a href="ettevottest.html">Bänd</a></li>
+                <li><a href="#">Tuurid</a></li>
+            </ul>
+    </nav>
+    </header>
+    <div class="main-container">
+        <!-- Product Detail Section -->
+        <section class="product-detail">
+            <div class="product-image-container">
+                <img src="assets/cd.jpeg" alt="Amb püstol nooltega" class="product-image">
+            </div>
+            <div class="product-text-content">
+                <h1>Ashes of Empires CD</h1>
+                <p class="product-price">Hind: $15.00</p>
+                <p class="product-description">"Ashes of Empires" on intensiivne ja brutaalne metal-album, mis ühendab tehnilise meisterlikkuse ja kompromissitu raskuse. Sobib ideaalselt death ja black metali austajatele, pakkudes atmosfääririkast heli ja kvaliteetset kujundust, mis täiendab iga metalikogu.</p>
+    
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="quantity-add-cart">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="decreaseQty()">-</button>
+                        <input type="number" id="qty" value="1" min="1" class="qty-input">
+                        <button class="qty-btn" onclick="increaseQty()">+</button>
+                    </div>
+                    <button class="add-to-cart-button">Lisa ostukorvi</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section large">
+                <h3>Meist</h3>
+                <p>Infernal Reign toob kuulajateni tumedad ja toored helid, 
+                    mis loovad sügava emotsionaalse kogemuse. Meie muusika 
+                    on kaose ja energia rituaal. </p>
+            </div>
+            <div class="footer-section small">
+                <h3>Info</h3>
+                <ul>
+                    <li><a href="#">Edasimüüjale</a></li>
+                    <li><a href="#">Tellimisinfo</a></li>
+                    <li><a href="#">Transport</a></li>
+                    <li><a href="#">KKK</a></li>
+                </ul>
+            </div>
+            <div class="footer-section small">
+                <h3>Võta ühendust</h3>
+                <ul>
+                    <li>E-post: info@infernalreign.com</li>
+                    <li>Telefon: (123) 456-7890</li>
+                    <li>Aadress: 1234 Street, City, Country</li>
+                </ul>
+            </div>           
+        </div>
+        <div class="footer-bottom">
+            <p>2024 &copy; Infernal Reign. Kõik õigused kaitstud.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Toggle the main menu
+        function toggleMenu() {
+            const menu = document.querySelector('.main-menu');
+            menu.classList.toggle('menu-active');
+        }
+
+        // Toggle the dropdown submenus
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.closest('li').querySelector('.dropdown');
+            const toggleIcon = event.target;
+
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                toggleIcon.textContent = '+';
+            } else {
+                dropdown.style.display = 'block';
+                toggleIcon.textContent = '–';
+            }
+        }
+    </script>
+
+    <script>
+        function increaseQty() {
+            const qtyInput = document.getElementById('qty');
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+        }
+
+        function decreaseQty() {
+            const qtyInput = document.getElementById('qty');
+            if (parseInt(qtyInput.value) > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Logo" style="height: 70px">
+            </div>
+            <nav class="top-menu">
+                <ul>
+                    <li><a href="#"><img src="assets/search.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                    <li><a href="#"><img src="assets/account.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                    <li><a href="#"><img src="assets/shopping.svg" alt="My SVG Icon" width="30" height="30"></a></li>
+                </ul>
+                </nav>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Avaleht</a></li>
+                <li><a href="#">Pood</a></li>
+                <li><a href="#">Muusika</a></li>
+                <li><a href="ettevottest.html">Bänd</a></li>
+                <li><a href="#">Tuurid</a></li>
+            </ul>
+    </nav>
+    </header>
+
+<div class="main-container">
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="main-content">
+            <div class="faq-container">
+                <h2>Mida inimesed meilt tihti küsivad</h2>
+                <p>Täiendavate küsimuste asjus võtke meiega ühendust kodulehe kontaktivormi kaudu või saatke kiri e-postile.</p>
+                <div class="faq-item">
+                    <h3 class="faq-question">1. Transport Eestis</h3>
+                    <p class="faq-answer">Kauba kättesaamiseks on võimalik ostu vormistades valida Omniva, DPD või SmartPosti pakiautomaat ja määrata nimekirjast soovitud pakiautomaadi asukoht.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">2. Transport Soomes, Lätis, Leedus</h3>
+                    <p class="faq-answer">Kauba kättesaamiseks on võimalik ostu vormistades valida Soome Itella Smartposti (Posti) pakiautomaat või Läti ja Leedu DPD pakiautomaat, ning määrata nimekirjast soovitud pakiautomaadi asukoht. Ostukorvi kassas valige riigiks, vastavalt oma asukohale, SOOME, LÄTI või LEEDU ja valikusse tuleb valitud riigi pakiautomaat, ning ostukorv arvutab vastavalt tellimuse summa.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">3. Transport teistes riikides</h3>
+                    <p class="faq-answer">Saadame tellitud tooteid pea kõikidesse riikidesse üle maailma. Rahvusvaheline saatmiskulu määratakse pakendi kaalu, saatmisviisi ja sihtkoha järgi.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">4. Millised on saatmise hinnad?</h3>
+                    <p class="faq-answer">Eraisikutele lisandub hinnale käibemaks 22%.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">5. Kuidas käib tellimine e-poes?</h3>
+                    <p class="faq-answer">Peale soovitud kaupade lisamist ostukorvi, valige ostu vormistamisel riik, kuhu Te soovite kaupa saada, täitke kõik vajalikud väljad ning makseviisiks valige: „Tasun saadetud arve alusel“. Peale tellimuse esitamist saadame Teie e-meili aadressile arve tasumiseks. Arve on võimalik tasuda VISA või MasterCard krediitkaardiga. Peale paki teele panekut saadame kliendile alati saadetise jälgimiskoodi.</p>
+                </div>
+            </div>
+            <script>
+                const questions = document.querySelectorAll('.faq-question');
+                questions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+</div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section large">
+                <h3>Meist</h3>
+                <p>Infernal Reign toob kuulajateni tumedad ja toored helid, 
+                    mis loovad sügava emotsionaalse kogemuse. Meie muusika 
+                    on kaose ja energia rituaal. </p>
+            </div>
+            <div class="footer-section small">
+                <h3>Info</h3>
+                <ul>
+                    <li><a href="#">Edasimüüjale</a></li>
+                    <li><a href="#">Tellimisinfo</a></li>
+                    <li><a href="#">Transport</a></li>
+                    <li><a href="#">KKK</a></li>
+                </ul>
+            </div>
+            <div class="footer-section small">
+                <h3>Võta ühendust</h3>
+                <ul>
+                    <li>E-post: info@infernalreign.com</li>
+                    <li>Telefon: (123) 456-7890</li>
+                    <li>Aadress: 1234 Street, City, Country</li>
+                </ul>
+            </div>           
+        </div>
+        <div class="footer-bottom">
+            <p>2024 &copy; Infernal Reign. Kõik õigused kaitstud.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Toggle the main menu
+        function toggleMenu() {
+            const menu = document.querySelector('.main-menu');
+            menu.classList.toggle('menu-active');
+        }
+
+        // Toggle the dropdown submenus
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.closest('li').querySelector('.dropdown');
+            const toggleIcon = event.target;
+            
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                toggleIcon.textContent = '+';
+            } else {
+                dropdown.style.display = 'block';
+                toggleIcon.textContent = '–';
+            }
+        }
+    </script>
+
+</body>
+</html>
